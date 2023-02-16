@@ -1,1 +1,44 @@
-<p>contact works!</p>
+<form #form="ngForm" (ngSubmit)="sendMessage()">
+  <label for="exampleFormControlInput1" class="form-label">First name</label>
+  <input
+    required
+    minlength="2"
+    name="firstname"
+    class="form-control"
+    id="exampleFormControlInput1"
+    placeholder="Your firstname"
+    [(ngModel)]="firstname"
+  />
+  <br />
+  <label for="exampleFormControlInput1" class="form-label">Last name</label>
+  <input
+    required
+    minlength="2"
+    name="lastname"
+    class="form-control"
+    id="exampleFormControlInput1"
+    placeholder="Your lastname"
+    [(ngModel)]="lastname"
+  />
+  <br />
+  <label for="exampleFormControlTextarea1" class="form-label"
+    >tell us your exprience</label
+  >
+  <textarea
+    maxlength="100"
+    required
+    name="body"
+    class="form-control"
+    id="exampleFormControlTextarea1"
+    rows="3"
+    [(ngModel)]="body"
+  ></textarea>
+
+  <br />
+  <input
+    type="submit"
+    [disabled]="form.invalid"
+    value="send request"
+    class="btn btn-success"
+  />
+</form>

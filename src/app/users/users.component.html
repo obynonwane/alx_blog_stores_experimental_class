@@ -1,0 +1,25 @@
+<form #form="ngForm" (ngSubmit)="submitForm()">
+  <label for="exampleFormControlInput1" class="form-label">Email address</label>
+  <input
+    email
+    name="email"
+    type="text"
+    class="form-control"
+    id="exampleFormControlInput1"
+    placeholder="name@example.com"
+    [(ngModel)]="email"
+  />
+
+  <label for="exampleFormControlTextarea1" class="form-label"
+    >Example textarea</label
+  >
+  <textarea
+    name="body"
+    class="form-control"
+    id="exampleFormControlTextarea1"
+    rows="3"
+    [(ngModel)]="body"
+  ></textarea>
+
+  <input [disabled]="form.invalid" type="submit" value="Submit" />
+</form>
