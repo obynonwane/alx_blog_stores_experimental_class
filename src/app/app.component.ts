@@ -28,7 +28,7 @@ export class AppComponent implements OnInit {
   sendMessage(message: any) {
     console.log(message);
     this.contactService
-      .sendMessage({ phone: '+2348080696623' })
+      .sendMessage({ phone: '+2348080690000' })
       .subscribe((data) => {
         console.log(data);
       });
